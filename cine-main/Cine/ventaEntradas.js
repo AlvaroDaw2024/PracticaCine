@@ -67,6 +67,10 @@ function seleccionar(){
     var indAs=0;       
     butacaId=parseInt(butacaId.substring(6));
     if(this.event.target.className=="libre"){
+        if (butacaSel >= 5) {
+            alert("Se puede comprar como maximo 5 asientos");
+            return; 
+        }
         vendidas.push(butacaId);
         asientos.push(butacaId);
         this.event.target.className="seleccionado";
